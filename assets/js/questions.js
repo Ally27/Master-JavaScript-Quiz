@@ -2,7 +2,7 @@
 var questions = [
   {
     question: "What data type returns true or false?",
-    answer: ["number", "boolean", "string", "if else"],
+    answers: ["number", "boolean", "string", "if else"],
     correct: 1,
   },
   {
