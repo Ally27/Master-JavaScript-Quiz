@@ -3,7 +3,11 @@ var nextButton = document.getElementById("next-btn");
 var questionContainerEl = document.getElementById("question-container");
 var questionEl = document.getElementById("question");
 var answerButtonsEl = document.getElementById("answer-btn");
+var timerEl = document.getElementById("timerValue");
+var mainMenuEl = document.getElementById("main-Menu");
 
+var timeLeft;
+var timerInterval;
 let shuffledQuestions, currentQuestionIndex;
 
 startButton.addEventListener("click", startGame);
@@ -13,10 +17,13 @@ nextButton.addEventListener("click", () => {
 });
 
 function startGame() {
+  mainMenuEl.classList.add("hide");
   startButton.classList.add("hide");
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
+  timeLeft = 10 * questions.length;
   questionContainerEl.classList.remove("hide");
+  startTimer();
   setNextQuestion();
 }
 
@@ -75,4 +82,26 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
   element.classList.remove("correct");
   element.classList.remove("wrong");
+}
+
+function updateTimerValue() {
+  timerEl.textContent = timeLeft;
+}
+
+function startTimer() {
+  timerInterval = setInterval(function () {
+    timeLeft -= 1;
+    updateTimerValue();
+    if (timeLeft <= 0 || currentQuestionIndex === questions.length) {
+      endGame();
+    }
+  }, 1000);
+}
+
+function endGame() {
+  clearInterval(timerInterval);
+  if (timeLeft < 0) {
+    timeLeft = 0;
+  }
+  updateTimerValue();
 }
