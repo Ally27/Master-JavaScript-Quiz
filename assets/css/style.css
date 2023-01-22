@@ -11,7 +11,9 @@ body{
     height: 100vh;  
     justify-content: center;
     align-items: center;
-    background-color: #e4ebf6;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+
 }
 
 body.correct{
@@ -60,12 +62,11 @@ body.wrong{
 }
 
 .start-btn, .next-btn{
-    background: rgb(10,15,106);
-    background: linear-gradient(0deg, rgba(10,15,106,1) 0%, rgba(47,21,113,1) 46%, rgba(61,158,121,1) 100%);
+    background: rgb(219,187,106);
+    background: radial-gradient(circle, rgba(219,187,106,1) 0%, rgba(251,54,94,1) 100%);
     font-size:1.5rem;
     font-weight:bold;
     color: white;
-    /* background-color: rgb(78, 127, 210) */
 }
 
 .controls{
