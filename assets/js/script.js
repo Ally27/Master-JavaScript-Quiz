@@ -98,6 +98,8 @@ function startTimer() {
   }, 1000);
 }
 
+function wrongTimer() {}
+
 function endGame() {
   clearInterval(timerInterval);
   if (timeLeft < 0) {
