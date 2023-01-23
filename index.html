@@ -5,17 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/hs.css">
     <title>Master JavaScript Quiz</title>
 </head>
 
 <body>
     <header>
-            <Highscore href="highscore.html">Highscore Page</a>
+            <a href="highscore.html">Highscore Page</a>
                 <div>
-                    <p>Correct: <span id= "correctAnswers"></span></p>
-                    <p>Time: <span id="timerValue"></span></p>
+                    <p>Correct: <span id= "correctAnswers">0</span></p>
+                    <p>Time: <span id="timerValue">40</span></p>
                 </div>
     </header>
+    <section id="main-Menu">
+        <h1>Master JavaScript Quiz</h1>
+        <p>
+            Test your knowledge in Javascript related questions!<br> This game is times and with each wrong answer the timer drops ten seconds!<br> Best of Luck!
+        </p>
+    </section>
     <div class="container">
     <div id="question-container" class="hide">
     <div id="question">Question</div>
@@ -32,6 +39,11 @@
     <button id="start-btn" class="start-btn btn">Start Quiz</button>
     <button id="next-btn" class="next-btn btn hide">Next</button>
 
+    </div>
+
+    <div>
+        <h2 class="correct hide">Correct!</h2>
+        <h2 class="wrong hide">Wrong!</h2>
     </div>
 <script src="./assets/js/script.js"></script> 
 <script src="/assets/js/questions.js"></script>

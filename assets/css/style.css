@@ -3,10 +3,44 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+.main-Menu,
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#timerValue{
+    color:red;
+    font-weight: bold;
+}
+
+header,
+p,
+h1{
+    font-size: 2.3rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.highScore{
+    display: flex;
+    justify-content: space-evenly;
+}
 body{
     padding: 0;
     margin: 0;
     display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;  
     justify-content: center;
@@ -44,21 +78,21 @@ body.wrong{
 .btn{
     background-color: #f4f4f4;
     border-radius: 10px;
-    border-color: rgb(78, 127, 210);
+    border-color: rgba(251,54,94,1);
     padding: 5px 10px;
     outline: none;
 }
 
 .btn:hover{
-    border-color: #000000;
+    border-color: #00b7ff;
 }
 
-.btn.correct{
+.btn .correct{
     background-color: #7ecf06;
 }
 
-.btn.wrong{
-    background-color: #ffffff;
+.btn .wrong{
+    background-color: #700000;
 }
 
 .start-btn, .next-btn{
