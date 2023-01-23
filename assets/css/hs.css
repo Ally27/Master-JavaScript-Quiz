@@ -45,6 +45,7 @@ body{
 }
 
 #clearHistory{
+    border-color: #00b7ff;
     background: rgb(219,187,106);
     background: radial-gradient(circle, rgba(219,187,106,1) 0%, rgba(251,54,94,1) 100%);
     font-size:1.5rem;

@@ -24,7 +24,16 @@ storedHighscores.sort(function (a, b) {
       : 0
     : null;
 });
-
+//storing user list
+for (var i = 0; i < storedHighscores.length; i++) {
+  var li = document.createElement("li");
+  li.textContent = `${i + 1}. ${storedHighscores[i].initals} --- ${
+    storedHighscores[i].answerScore
+  } Correct --- ${storedHighscores[i].timeScore} Seconds remaining`;
+  highscoreList.append(li);
+}
+//deleting score history
 clearHistoryEl.addEventListener("click", function () {
   localStorage.clear();
+  location.reload();
 });

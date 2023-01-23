@@ -1,11 +1,17 @@
+//start and next buttons
 var startButton = document.getElementById("start-btn");
 var nextButton = document.getElementById("next-btn");
+
+//questions & answers
 var correctAnswersEl = document.getElementById("correctAnswers");
 var questionContainerEl = document.getElementById("question-container");
 var questionEl = document.getElementById("question");
 var answerButtonsEl = document.getElementById("answer-btn");
+
+//timer
 var timerEl = document.getElementById("timerValue");
 var mainMenuEl = document.getElementById("main-Menu");
+var selectedButton = document.getElementById("selectedButton");
 
 var timeLeft;
 var timerInterval;
@@ -61,7 +67,6 @@ function resetState() {
 function selectAnswer(event) {
   var selectedButton = event.target.innerText;
   console.log("target:", selectedButton);
-  //   var correct =
   console.log("this: ", questions[currentQuestionIndex].correct);
   //   setStatusClass(document.body, correct);
   Array.from(answerButtonsEl.children).forEach((button) => {
@@ -125,12 +130,9 @@ function endGame() {
   }
   updateTimerValue();
 }
-function correctAnswers() {
-  var score = 0;
-}
+
 function saveScore(event) {
   event.preventDefault();
-
   var scoreData = {
     initals: initalsEl.value,
     answerScore: correctAnswers,
@@ -143,6 +145,6 @@ function saveScore(event) {
   storedHighscores.push(scoreData);
 
   localStorage.setItem("storedHighscores", JSON.stringify(storedHighscores));
-
-  window.location = "./Assets/html/highscores.html";
+  questionContainerEl.addEventListener("click", checkAnswer);
+  highscoreList.addEventListener("submit", saveScore);
 }
