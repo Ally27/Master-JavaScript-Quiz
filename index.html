@@ -27,10 +27,10 @@
      <div id="question-container" class="hide">
     <div id="question">Question</div>
         <div id="answer-btn" class="btn-grid">
-            <button class="btn">Answer 1</button>
+            <!-- <button class="btn">Answer 1</button>
             <button class="btn">Answer 2</button>
             <button class="btn">Answer 3</button>
-            <button class="btn">Answer 4</button>
+            <button class="btn">Answer 4</button> -->
         </div>
     </div>
 
@@ -39,13 +39,19 @@
     <button id="next-btn" class="next-btn btn hide">Next</button>
 
     </div>
-
-    <div>
-        <h2 class="correct hide">Correct!</h2>
-        <h2 class="wrong hide">Wrong!</h2>
-    </div>
+        <div class="hide" id="complete">
+            <h1>Complete!</h1>
+            <p> Your final score is <span id="answeredCorrectScore">10 </span>correct answers with<span
+                id="finished-score"> 0</span> time remaining.</span></p>
+                <div id="initials-here">
+                    <label>Enter your initials here.</label>
+                    <input type="text" id="initials">
+                    <input type="submit" id="submitInitialsButton" value="submit">
+                </div>
+            </div>
     <script src="./assets/js/highscore.js"></script>
-<script src="./assets/js/script.js"></script> 
-<script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/script.js"></script> 
+    <script src="./assets/js/questions.js"></script>
+
 </body>
 </html>

@@ -54,6 +54,14 @@ body{
     padding: 5px 10px;
 }
 
+#clear-history{
+    background: rgb(219,187,106);
+    background: radial-gradient(circle, rgba(219,187,106,1) 0%, rgba(251,54,94,1) 100%);
+    font-size:1.5rem;
+    font-weight:bold;
+    color: white;
+}
+
 .clear-btn{
     display: flex;
     justify-content: center;
@@ -64,4 +72,12 @@ body{
     border-radius: 5px;
     padding: 25px;
     box-shadow: 0 0 10px 2px;
+}
+
+.btn:hover{
+    border-color: #00b7ff;
+}
+
+.hide{
+    display: none;
 }

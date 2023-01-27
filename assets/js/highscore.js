@@ -1,9 +1,8 @@
 var highscoreList = document.getElementById("highscoreList");
-var clearHistoryEl = document.getElementById("clearHistory");
+var clearHistoryEl = document.getElementById("clear-history");
 
 var storedHighscores =
   JSON.parse(localStorage.getItem("storedHighscores")) || [];
-console.log(storedHighscores);
 
 //stores objects
 storedHighscores.sort(function (a, b) {

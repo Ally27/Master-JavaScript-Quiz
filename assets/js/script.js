@@ -2,6 +2,12 @@
 var startButton = document.getElementById("start-btn");
 var nextButton = document.getElementById("next-btn");
 
+//End of quiz
+var finishedScoreEl = document.getElementById("finished-score");
+var correctScoreSpan = document.querySelector("#answeredCorrectScore");
+var initalsFormEl = document.querySelector("#initalsHere");
+var initalsEl = document.querySelector("#initials");
+var correctScoreSpan = document.querySelector("#answeredCorrectScore");
 //questions & answers
 var correctAnswersEl = document.getElementById("correctAnswers");
 var questionContainerEl = document.getElementById("question-container");
@@ -14,14 +20,16 @@ var mainMenuEl = document.getElementById("main-Menu");
 var selectedButton = document.getElementById("selectedButton");
 // score list
 var initalsEl = document.getElementById("initals");
+var initialsHereEl = document.getElementById("initials-here");
 
+//empty variables
 var timeLeft = 40;
 var timerInterval;
 var incorrectAnswer;
 var correctAnswers;
 
 let shuffledQuestions, currentQuestionIndex;
-
+//event listener for start/next
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
@@ -110,7 +118,7 @@ function updateTimerValue() {
 }
 
 function startTimer() {
-  let timerInterval = setInterval(function () {
+  timerInterval = setInterval(function () {
     timeLeft -= 1;
     updateTimerValue();
     if (timeLeft <= 0 || currentQuestionIndex === questions.length) {
@@ -148,5 +156,5 @@ function saveScore(event) {
 
   localStorage.setItem("storedHighscores", JSON.stringify(storedHighscores));
   questionContainerEl.addEventListener("click", checkAnswer);
-  highscoreList.addEventListener("submit", saveScore);
+  initalsEl.addEventListener("submit", saveScore);
 }
