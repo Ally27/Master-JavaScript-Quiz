@@ -50,14 +50,6 @@ body{
 
 }
 
-body.correct{
-    background-color: #7ecf06;
-}
-
-body.wrong{
-    background-color: #6f0202;
-}
-
 .container{
     width: 800px;
     max-width: 80%;

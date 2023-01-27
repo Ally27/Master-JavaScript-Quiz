@@ -99,6 +99,25 @@ function correctAnswers() {
   correctAnswers.textContent = correctAnswers;
 }
 
+function wrongAnswer() {
+  timeLeft -= 10;
+  updateTimerValue();
+  wrongEl.classList.remove("hidden");
+}
+
+function checkAnswer(event) {
+  if (event.target.type === "submit") {
+    clearTimeout(correctWrongTimeout);
+    hideCorrectWrong();
+
+    var answer = event.target.getAttribute("data-answer");
+
+    answer === questions[index].correct ? correctAnswer() : wrongAnswer();
+
+    nextQuestion();
+  }
+}
+
 function setStatusClass(element, correct) {
   clearStatusClass(element);
   if (correct) {
