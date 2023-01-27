@@ -15,7 +15,7 @@ var selectedButton = document.getElementById("selectedButton");
 // score list
 var initalsEl = document.getElementById("initals");
 
-var timeLeft;
+var timeLeft = 40;
 var timerInterval;
 var incorrectAnswer;
 var correctAnswers;
