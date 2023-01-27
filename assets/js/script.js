@@ -12,6 +12,8 @@ var answerButtonsEl = document.getElementById("answer-btn");
 var timerEl = document.getElementById("timerValue");
 var mainMenuEl = document.getElementById("main-Menu");
 var selectedButton = document.getElementById("selectedButton");
+// score list
+var initalsEl = document.getElementById("initals");
 
 var timeLeft;
 var timerInterval;
